@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Student Info: Name=Lo,WeiShun , ID= 13108
+Subject: CourseNo_Quiz1_Summer_2015
+Author: raliclo
+Filename: index.html
+Date and Time: Feb 6, 2016 4:48:02 PM
+Project Name: HTML5Application
+-->
+<html>
+    <head>
+        <title>Quiz-1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="init.css">
+        <script src="cal.js"></script>
+    </head>
+    <body>
+        <div id="top">
+            <div id="circle"></div>
+        </div>
+        <hr>
+        <div id="times"> You tried 0 times</div>
+        <span id="info"></span>
+        <hr>
+        <div class="bottom">
+            <p>This website generates random  number from 1~100</p>
+            <p>
+                Please enter a number to guess the size : (1~100)
+                <input id="feedback" type="text">
+                <button onclick="check(feedback.value)"> Check Result</button>
+            <p>
+        </div>
+        <div class="answer"></div>
+    </body>
+</html>

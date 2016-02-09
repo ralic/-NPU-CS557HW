@@ -1,0 +1,51 @@
+/*
+Student Info: Name=Lo,WeiShun , ID= 13108
+Subject: CS557-HW2_Summer_2015
+Author: raliclo
+Filename: signup.css
+Date and Time: Feb 8, 2016 6:34:20 PM
+Project Name: CS557-HW2-13108-Weishun
+*/
+/* 
+    Created on : Feb 8, 2016, 6:34:20 PM
+    Author     : raliclo
+*/
+* {
+    max-height: 100%;
+    max-width: 100%;
+}
+.logo {
+        margin: 0 0 10px 20px;
+        height : 220px;
+        width : 220px;
+        text-align: center;
+        background-image: url("./images/npulogo.jpeg");
+}
+body {  
+	font-size: 75.5%;
+	font-family: Myriad Pro;
+	color: #333;
+        background-image: url("./images/disney.jpg");
+        background-size: 960px 640px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center; 
+}
+table {
+    margin:auto;
+    width :50%;
+    border-collapse: collapse;
+    background-color: violet;
+}
+th {
+    height: 100px;
+}
+td {
+    border-width: 2px;
+    border-color: lightseagreen;
+    border-style: solid;
+    text-align: left;
+}
+.submits {
+    height : 35px;
+}

@@ -1,0 +1,71 @@
+
+
+<!-- 1. Load libraries -->
+<script src="https://rawgithub.com/systemjs/systemjs/0.19.6/dist/system.js"></script>
+<script src="https://code.angularjs.org/tools/typescript.js"></script>
+<script src="https://code.angularjs.org/2.0.0-beta.0/angular2-polyfills.js"></script>
+<script src="https://code.angularjs.org/2.0.0-beta.0/Rx.js"></script>
+<script src="https://code.angularjs.org/2.0.0-beta.0/angular2.dev.js"></script>
+
+<!-- 2. Configure SystemJS -->
+<script>
+    System.config({
+        transpiler: 'typescript',
+        typescriptOptions: {emitDecoratorMetadata: true},
+        packages: {'src': {defaultExtension: 'ts'}}
+    });
+</script>
+
+<!-- 3. Bootstrap -->
+<script>
+    System.import('angular2/platform/browser').then(function (ng) {
+        System.import('src/hello_world').then(function (src) {
+            ng.bootstrap(src.HelloWorld);
+        });
+    });
+</script>
+<!--
+<script>
+
+            <div id="myForm">
+                <hr />
+                Length: <input type="text" id="length" value="80%" />
+                <br />
+                <select id="bodyColor">
+                    <option value="silver">Silver</option>
+                    <option value="green">Green</option>
+                    <option value="Red">Red</option>
+                    <option value="blue" selected>Blue</option>
+                </select>
+                <br />
+                <button onclick="customize();">Customize</button>
+            </div>
+            <div class="length">
+                <input class="input-range" type="range" value="250" min="1" max="500">
+                <span class="range-value"></span>
+            </div>
+
+            value.html(range.attr('value'));
+            range.on('input', function () {
+                value.html(this.value);
+            });
+
+            var myCar = {
+                make: "Future Car",
+                model: "Z18",
+                color: "blue",
+                length: "80%",
+                year: 2018,
+                category: "Luxury Car",
+                price: 10000
+            };
+            window.onload = function () {
+                document.getElementById("price").innerHTML = myCar.price;
+            }
+            function customize() {
+                myCar.length = document.getElementById("length").value;
+                myCar.color = document.getElementById("bodyColor").value;
+                document.getElementById("body").style.width = myCar.length;
+                document.getElementById("body").style.backgroundColor = myCar.color;
+            }
+        </script>-->

@@ -1,0 +1,19 @@
+/*
+Student Info: Name=Lo,WeiShun , ID= 13108
+Subject: CS557_HWNo2_Summer_2015
+Author: raliclo
+Filename: singup_confirm.css
+Date and Time: Feb 8, 2016 6:37:17 PM
+Project Name: CS557-HW2-13108-Weishun
+*/
+/* 
+    Created on : Feb 8, 2016, 6:37:17 PM
+    Author     : raliclo
+*/
+
+body {
+	font-size: 75.5%;
+	font-family: Myriad Pro;
+	color: #333;
+        background-color: lightblue;
+}

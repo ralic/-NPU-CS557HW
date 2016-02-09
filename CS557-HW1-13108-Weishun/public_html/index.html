@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+Student Info: Name=Lo,WeiShun , ID= 13108
+Subject: CourseNo_HWNo_Summer_2015
+Author: raliclo
+Filename: index.html
+Date and Time: Jan 25, 2016 3:34:16 PM
+Project Name: CS557-HW1-13108-Weishun
+-->
+<html>
+    <head>
+        <!--<script src="http://www.w3schools.com/lib/tinycolor.js"></script>-->
+
+        <script>
+            // Listen to mouse events for onmousemove & mouseenter
+            window.onload = init;
+            function init() {
+                document.onmousemove = updateMouse;
+                document.mouseenter = updateMouse;
+            }
+
+            // Loading body size information from window object
+            function getsize() {
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                document.getElementById("browserSize").innerHTML = "W:" + w + "*H: " + h;
+            }
+            // House size control
+            function getdivHouseSize() {
+                var houseH = document.getElementById("house").clientHeight;
+                var houseW = document.getElementById("house").clientWidth;
+                document.getElementById("housesize").innerHTML = "W:" + houseW + "*H: " + houseH;
+            }
+            // House.window size control
+            function getwindowSize() {
+                var circleH = document.getElementsByClassName('circle')[0].clientHeight;
+                var circleW = document.getElementsByClassName("circle")[0].clientWidth;
+                document.getElementById("windowsize").innerHTML = "W:" + circleW + "*H: " + circleH;
+            }
+
+            // loading mouse location from window object
+            function updateMouse(e) {
+                var mouseX = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+                var mouseY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+                document.getElementById("cursorLoc").innerHTML = "X:" + mouseX + "*Y: " + mouseY;
+                //                var divW = window.innerWidth;
+                //                var divH = window.innerHeight;
+                //                document.getElementById("getHouseWindowSize").innerHTML = "W:" + wW + "*H: " + hW;
+            }
+        </script>
+    </head>
+
+    <body onresize="getsize();getdivHouseSize();getwindowSize()">
+        <style>
+            *{
+                text-align: center;
+                color: purple; /* text color*/
+                z-index: -1;
+            }
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+            body > div.house {
+                width: 70%;
+                height: 100%;
+                background-color:green;
+            }
+            .house .Roof{
+                top :5%;
+                width:70%;
+                height:20%;
+                background-color: black;
+                margin:auto;
+            }
+            .house .Wall{
+                top :20%;
+                width:60%;
+                height:60%;
+                vertical-align: bottom;
+                background-color: grey;
+                margin:auto;
+                z-index: 1;
+            }
+            .house .Door{
+                position : relative;
+                top:-50%;
+                height:50%;
+                width:20%;
+                background-color:  cyan;
+                margin:auto;
+                z-index: 2;
+            }
+            .windowline
+            {
+                position:relative;
+                height: 80%;
+                top : -100%;
+                z-index: 3;
+            }
+            .circle {
+                display:inline-table;
+                position:relative;
+                height: 20%;
+                width: 15%;
+                border-radius: 100%;
+                background-color: gold;
+            }
+            .house .windows1 {
+                left : -12.5%;
+            }
+            .house .windows2 {
+                right : -12.5%;
+            }
+            #sidebar{
+                border-width:3px;
+                border-color: green;
+                border-radius:5px;
+                box-shadow: 5px 5px 5px #888888;
+                background-color: #99ff99;
+                float: right;
+                z-index: 1;
+            }
+            .form-control{
+                text-align: left;
+                z-index: 99;
+            }
+        </style>
+        <!--Form Object for data input-->
+        <div id="sidebar" >
+            <form class="form-control">
+                <table border="0">
+                    <tr>
+                        <td>Browser Size= <span id="browserSize"/></td>
+                    </tr>
+                </table>
+                <hr>
+                <table border="0">
+                    <tr>
+                        <td>Mouse Loc= <span id="cursorLoc"/></td>
+                    </tr>
+                </table>
+                <hr>
+                <table border="0">
+                    <tr>
+                        <td>House Size= <span id="housesize"/></td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>Width :
+                        <input onchange="resizeHouseW(value)" type="range" min=30 max=100 value=50></li>
+                    <li>Height :
+                        <input onchange="resizeHouseH(value)" type="range" min=30 max=100 value=50></li>
+                </ul>
+                <hr>
+                <table border="0">
+                    <tr>
+                        <td>Window size= <span id="windowsize"/></td>
+                    </tr>
+                </table>
+                <ul>
+                    <li>Width :
+                        <input onchange="resizeWinW(value)" type="range" min=1 max=15 value=5></li>
+                    <li>Height :
+                        <input onchange="resizeWinH(value)" type="range" min=1 max=40 value=10></li>
+                </ul>
+                <hr>
+                Roof color : (Selector)
+                <br>
+                <select onchange="roofbg(value)">
+                    <option value="silver" >sliver</option>
+                    <option value="gold">gold</option>
+                    <option value="purple">purpple</option>
+                    <option value="blue">blue</option>
+                </select>
+                <br>
+                Wall color :(HTML5)
+                <input type="color" id="html5colorpicker" onchange="wallbg(value)" value="#ffff00" style="width:80%;">
+                <br>
+                Door color :(HTML5)
+                <input type="color" id="html5colorpicker" onchange="doorbg(value)" value="#00ffff" style="width:80%;">
+                <br>
+            </form>
+        </div>
+        <!--House Object-->
+        <div class="house" id="house" >
+            <div class="Roof">Roof</div>
+            <div class="Wall">Wall</div>
+            <div class="Door">Door</div>
+            <div class="windowline">
+                <div class="windows1 circle">Windows1</div>
+                <div class="windows2 circle">Windows2</div>
+            </div>
+        </div>
+        <script>
+            // Get All ojbects in the same Class
+            // ex. getClass("Roof")
+            var getClass = function (e) {
+                var obj = document.getElementsByClassName(e);
+//                console.log(obj.length); // report numbers of objs having the same class
+//                for (var i in obj) {
+//                    obj[i];
+//                    console.log(i + "=" + obj[i]);
+//                }
+
+                // Allow change of style of objects as a method
+                // ex. setCSS(getClass("Roof")[0],"background-color: blue;")
+                // Status : Not yet implemented.
+
+                return obj;
+            };
+            var roofbg = function (e) {
+                getClass("Roof")[0].setAttribute("style", "background-color:" + e);
+            };
+            var wallbg = function (e) {
+                getClass("Wall")[0].setAttribute("style", "background-color:" + e);
+            };
+            var doorbg = function (e) {
+                getClass("Door")[0].setAttribute("style", "background-color:" + e);
+            };
+            roofbg("black");
+            // Set background color
+            document.bgColor = "lightgrey";
+        </script>
+        <script>
+            var resizeHouseW = function (e) {
+                getClass("house")[0].setAttribute("style", "width:" + e + "%");
+                getdivHouseSize();
+                getwindowSize();
+            };
+
+            var resizeHouseH = function (e) {
+                getClass("house")[0].setAttribute("style", "height:" + e + "%");
+                getdivHouseSize();
+                getwindowSize();
+            };
+            var resizeWinW = function (e) {
+                getClass("circle")[0].setAttribute("style", "width:" + e + "%");
+                getClass("circle")[1].setAttribute("style", "width:" + e + "%");
+                getwindowSize();
+            };
+
+            var resizeWinH = function (e) {
+                getClass("circle")[0].setAttribute("style", "height:" + e + "%");
+                getClass("circle")[1].setAttribute("style", "height:" + e + "%");
+                getwindowSize();
+            };
+        </script>
+    </body>
+</html>

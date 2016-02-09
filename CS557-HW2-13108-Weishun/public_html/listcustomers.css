@@ -1,0 +1,35 @@
+/*
+Student Info: Name=Lo,WeiShun , ID= 13108
+Subject: CS557-HW2_Summer_2015
+Author: raliclo
+Filename: listcustomers.css
+Date and Time: Feb 8, 2016 11:22:23 PM
+Project Name: CS557-HW2-13108-Weishun
+*/
+/* 
+    Created on : Feb 8, 2016, 11:22:23 PM
+    Author     : raliclo
+*/
+
+table {
+    width : 70%;
+}
+h1 {
+    text-align: center;
+    color : blue;
+}
+td {
+   padding: 2px;
+   border-width :1px;
+   text-align: center;   
+   vertical-align: middle;
+   color : blueviolet;
+}
+div {
+    text-align: center;
+}
+button {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
