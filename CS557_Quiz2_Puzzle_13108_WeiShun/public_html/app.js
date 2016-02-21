@@ -58,6 +58,15 @@ function timerstart() {
     document.getElementById("info").innerHTML = "You have 10 sec to move objects to the right place !!";
     timeout = setTimeout(
             function () {
+                for (var i = 0; i < draggable.length; i++) {
+                    draggable[i].removeEventListener("dragstart");
+                }
+                for (i = 0; i < targets.length; i++) {
+                    targets[i].removeEventListener("dragover");
+                    targets[i].removeEventListener("drop");
+                    targets[i].removeEventListener("dragenter");
+                    targets[i].removeEventListener("dragleave");
+                }
                 alert("You lose !! Refresh the page to try again");
             }, 10000);
     counts = 0;
