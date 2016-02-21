@@ -1,0 +1,38 @@
+/*
+Student Info: Name=Lo,WeiShun , ID= 13108
+Subject: CourseNo_HWNo_Summer_2015
+Author: raliclo
+Filename: style.css
+Date and Time: Feb 20, 2016 5:15:19 PM
+Project Name: Puzzle
+*/
+/* 
+    Created on : Feb 20, 2016, 5:15:19 PM
+    Author     : raliclo
+*/
+
+ img {
+                width: 100%;
+                height: 100%;
+            }
+            .panel {
+                height: 220px;
+                width: 90%;
+                margin: 2px;
+                background-color: gainsboro;
+                float: left;
+            }
+            [data-drop-target] {
+                height: 200px;
+                width: 23%;
+                margin: 5px;
+                background-color: lightblue;
+                float: left;
+            }
+            .drag-enter {
+                border: 2px dashed #000;
+            }
+            p {
+                background-color: blueviolet;
+                height:50%;
+            }
