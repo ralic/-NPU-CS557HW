@@ -12,6 +12,7 @@ Project Name: CS557-HW3-13108-Weishun
 */
 
 *{
+    font-family: Myriad Pro;
     overflow: hidden; 
     text-overflow:ellipsis;
 }
@@ -24,14 +25,15 @@ body {
 .nav-container{
     width : 100%;
     height : 10%;
-    background-color: greenyellow;
     border-radius: 5%;
-    align-content: space-between;
+    /*Color*/
+    background-image: linear-gradient(to right,lightsteelblue,lightcyan,lightsteelblue);
 }
 
 .navlist {
     display:inline-table;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
+    background-image: linear-gradient(to right,lightblue,lightgreen,lightyellow);
     border-radius: 5%;
     border-style: double;
     width: calc(18%);
@@ -49,22 +51,28 @@ body {
          margin-top: 0.2%;
     }
     .main-section{
+        /*Layout*/
         margin-left: 1%;
         height : 73vh;
         width : 67%;
-        background-color: yellow;
+        /*Color*/
+        background-image: linear-gradient(to right,#d8ecfd,#dfd,#e6e6fa);
     }
     .right-side{
+        /*Layout*/
         height : 83.5vh;
         width :15%;
         float:right;
-        background-color: green;
+        /*Color*/
+        background-image: linear-gradient(to right,lightcyan,lightyellow);
     }
-    .left-side{
+    .left-side{        
+        /*Layout*/
         height : 83.5vh;
         width: 15%;
         float:left;
-        background-color: aqua;
+        /*Color*/
+        background-image: linear-gradient(to right,lightblue,blanchedalmond,lightgrey);
     }
 }
 /*Mobile View*/
@@ -81,38 +89,48 @@ body {
         font-size: calc(60%);
     }
     .main-section{
-        background-color: yellow;
         height: 45vh;
-        overflow-y: scroll
+        overflow-y: scroll;
+        /*Color*/
+        background-image: linear-gradient(to right,#d8ecfd,#dfd,#e6e6fa);
     }
     .right-side{
         float:top;
-        background-color: green;
         height: 10vh;
+        /*Color*/
+        background-image: linear-gradient(to right,lightcyan,lightyellow);
     }
     .left-side{
-        background-color: aqua;
         height: 8vh;
+        /*Color*/
+        background-image: linear-gradient(to right,lightblue,blanchedalmond,lightgrey);
     }
 }
 
 aside {
-    /*Blcok control*/
+    /*Layout*/
     border-radius: 5%;
     height :4vh;
     background-color: grey;
+
     /*Text Control*/
     text-align: center;
     font-size: calc(60%);
+        
+    /*Color*/
+     background-image: linear-gradient(to right,lightsteelblue,blanchedalmond,lightslategrey);
+
 }
 
 footer {
-    /*Blcok control*/
+    /*Layout*/
     border-radius: 5%;
     height :4vh;
-    background-color: darkorange;
     
     /*Text Control*/
     text-align: center;
     font-size: calc(60%);
+    
+    /*Color*/
+     background-image: linear-gradient(to right,lightslategrey,blanchedalmond,lightsteelblue);
 }
