@@ -10,10 +10,13 @@ Project Name: CS557-HW4-13108-Weishun
     Created on : Mar 22, 2016, 1:06:57 AM
     Author     : raliclo
 */
+html{
+    height: 100vh;
+    width : 100vw;
+}
 
 body {
-    height: 100%;
-    width :100%;
+    height: 100vh;
     font-family: Myriad Pro;
     /*background-color: bisque;*/
     background-image:
@@ -32,7 +35,7 @@ h3 {
 }
 
 table {
-    width : 100%;
+    width : 87vw;
     background-color: pink;
     border-style: double;
 }
@@ -41,6 +44,7 @@ h1 {
     color : blue;
 }
 td {
+/*   width:10%;*/
    padding: 2px;
    border-width :1px;
    border-style: ridge;

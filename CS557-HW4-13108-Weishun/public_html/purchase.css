@@ -11,6 +11,13 @@ Project Name: CS557-HW4-13108-Weishun
     Author     : raliclo
 */
 
+html {
+/*    background-color:purple;
+    background-image:
+        url(https://upload.wikimedia.org/wikipedia/en/a/ae/Ucsd-beach-sunset.jpg);*/
+    height:100vh;
+    width :100%;
+}
 
 .PurchasePage {
     color : white;

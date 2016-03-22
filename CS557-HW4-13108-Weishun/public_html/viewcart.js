@@ -17,11 +17,11 @@ window.onload = function () {
     };
     tbadd("<tr>" +
             "<td>OrderID  </td>" +
-            "<td>ImgQuality  </td>" +
-            "<td>Quantity</td>" +
-            "<td>ItemTypes   </td>" +
-            "<td>GlossyFinish</td>" +
-            "<td>ShipDate</td>" +
+            "<td>Item\nTypes   </td>" +
+            "<td>Qty</td>" +
+            "<td>Quality  </td>" +
+            "<td>Glossy\nFinish</td>" +
+            "<td>Ship\nDate</td>" +
             "</tr>");
     /*
      *
@@ -41,7 +41,7 @@ window.onload = function () {
                     "<td>" + clist[i].qty + "</td>" +
                     "<td>" + clist[i].imgQ + "</td>" +
                     "<td>" + clist[i].finish + "</td>" +
-                    "<td>" + clist[i].shipdate + "</td>" +
+                    "<td>" + clist[i].shipdate.split("T")[0] + "</td>" +
                     "</tr>");
 //        }
         }
