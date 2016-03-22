@@ -1,0 +1,427 @@
+/*
+Student Info: Name=Lo,WeiShun , ID= 13108
+Subject: CS557_HWNo4_Summer_2015
+Author: raliclo
+Filename: hp.css.css
+Date and Time: Feb 21, 2016 3:56:58 PM
+Project Name: CS557-HW4-13108-Weishun
+*/
+/* 
+    Created on : Feb 21, 2016, 3:56:58 PM
+    Author     : raliclo
+*/
+
+*{
+    overflow: hidden; 
+    text-overflow:ellipsis;
+}
+
+section{
+}
+
+html {
+/*    background-color:purple;
+    background-image:
+        url(https://upload.wikimedia.org/wikipedia/en/a/ae/Ucsd-beach-sunset.jpg);*/
+    height: 100%;
+    width :100%;
+}
+
+body {
+    height: 100%;
+    width :100%;
+    font-family: Myriad Pro;
+    /*background-color: bisque;*/
+    background-image:
+        url(https://upload.wikimedia.org/wikipedia/en/a/ae/Ucsd-beach-sunset.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner{
+    text-align: center;
+    width : 60%;
+    margin: auto;
+    /*backgrounds*/
+    background-color: white;
+    background-image:
+        url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png);
+    background-size: 200px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 0.75; 
+}
+.gjoin {
+    position: relative;
+    top: 50%;
+    /*Animation Using @keyframes*/
+    animation-name: textjump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+#gmap {
+    border:0;
+    height:calc(70%);
+    width:calc(90%);
+    margin-left:calc(5%);
+}
+#corp_desc {
+    transform: translateY(-10%) ;
+    /*Animation Using @keyframes*/
+    overflow: hidden;
+    animation-name: corpdesc;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes corpdesc {
+    0% {opacity:0.9;  color: skyblue;}
+    50% {opacity:0.7;  color: blue;}
+    100% {opacity:0.9;  color: skyblue;}
+}
+
+@keyframes textjump {
+    50% {transform: translateY(-60%) rotate(-7deg);}
+    100% {transform: translateY(-60%) rotate(7deg);}
+}
+
+/*Nav-bar*/
+.nav-container{
+    width : 100%;
+    height : 10%;
+    border-radius: 10px;
+    text-align: center;
+    /*Color*/
+    /*background-image: linear-gradient(to right,lightsteelblue,lightcyan,lightsteelblue);*/
+}
+
+/* 
+CSS to control navbar buttons
+*/
+.navlist {
+    display:inline-block;
+    margin-left: -2%;
+    /*background-color: blueviolet;*/
+    background-image: linear-gradient(to right,lightblue,lightgreen,lightyellow);
+    border-radius: 10px;
+    border-style: double;
+    width: calc(14%);
+}
+.navlist:hover {
+    /* Reverse color linear graident*/
+    background-image: linear-gradient(to left,lightblue,lightgreen,lightyellow);
+    /* Mouse over pointer cursor*/
+    cursor:pointer; 
+}
+.scn-resp {
+    /*font color*/
+    color : darkorange;
+    
+    border-radius: 5%;
+    border-style: ridge;
+    border-width: 1px;
+}
+
+
+/*Desktop View*/
+@media screen and (min-width: 480px) {
+   .scn-resp {
+        display:inline-block;
+    }
+
+    .main-section{
+        /*Layout*/
+        margin-left: 1%;
+        height : 70vh;
+        width : 67%;
+        /*Color*/
+        /*background-image: linear-gradient(to right,#d8ecfd,#dfd,#e6e6fa);*/
+    }
+    .right-side{
+        /*Layout*/
+        height : 74vh;
+        width :15%;
+        float:right;
+        border-radius: 10px;
+   
+        /*Color*/
+        /*background-image: linear-gradient(to right,lightcyan,lightyellow);*/
+    }
+    .left-side{        
+        /*Layout*/
+        height : 74vh;
+        width: 15%;
+        float:left;
+        border-radius: 10px;
+        /*Color*/
+        /*background-image: linear-gradient(to right,lightblue,blanchedalmond,lightgrey);*/
+    }
+}
+
+/*Mobile View*/
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-image:
+        url(https://upload.wikimedia.org/wikipedia/en/a/ae/Ucsd-beach-sunset.jpg);
+    }
+    .nav-container{
+        /*height : 40%;*/
+        /*overflow-y: scroll*/
+    }
+    .navlist {
+        width: calc(80%);
+    }
+    .scn-resp {
+        font-size: calc(60%);
+    }
+    .main-section{
+
+         /*Layout*/
+        height: 38vh;
+        /*overflow-y: scroll;*/
+        /*Color*/
+        /*background-image: linear-gradient(to right,#d8ecfd,#dfd,#e6e6fa);*/
+    }
+    .right-side{
+         /*Layout*/
+        border-radius: 10px;
+        float:top;
+        height: 8vh;
+        
+        overflow-y: scroll;
+        /*Color*/
+        /*background-image: linear-gradient(to right,lightcyan,lightyellow);*/
+    }
+    .left-side{
+         /*Layout*/
+        height: 25vh;
+        border-radius: 10px;
+        overflow-y: scroll;
+        /*Color*/
+        /*background-image: linear-gradient(to right,lightblue,blanchedalmond,lightgrey);*/
+    }
+    .dropdown .navlist {
+        display: none;
+        /*position: absolute;*/
+        background-color: #f9f9f9;
+        /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+        /*padding: 12px 16px;*/
+        z-index: 1;
+    }
+    .dropdown .navtop {
+        /*position: relative;*/
+        display: inline-block;
+    }
+
+    ul.dropdown:hover .navlist {
+        display: inline-block;
+    }
+    
+    #ItemTypes input[type="radio"]{
+        display:inline-table;
+    }
+
+}
+    
+
+/*    #ItemTypes input[type="radio"]{
+        display:list-item;
+    }*/
+
+/*
+Transitions for ads.
+*/
+        
+
+aside {
+    /*Layout*/
+    border-radius: 10px;
+    width : 60vw;
+    height :4vh;
+    margin:auto;
+    
+    /*Text Control*/
+    text-align: center;
+    font-size: calc(60%);
+    color: antiquewhite;
+    
+    /*Color*/
+     /*background-image: linear-gradient(to right,lightsteelblue,blanchedalmond,lightslategrey);*/
+    background-position: center;
+        
+    /*Animation Using @keyframes*/
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/*Standard syntax*/ 
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:orangered; left:200px; top:0px;}
+    50%  {background-color:skyblue;left:200px; top:200px;}
+    75%  {background-color:yellowgreen; left:0px; top:200px;}
+    100% {background-color:plum; left:0px; top:0px;}
+}
+
+footer {
+    /*Layout*/
+    border-radius: 10px;
+    width : 50vw;
+    height :4vh;
+    margin:auto;
+    
+    /*Text Control*/
+    text-align: center;
+    font-size: calc(60%);
+    color: antiquewhite;
+    
+    /*Color*/
+    /*background-image: linear-gradient(to right,lightsteelblue,blanchedalmond,lightslategrey);*/
+
+      
+    /*Animation using @keyframe*/
+    animation-name: noheight;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;    
+    
+    /*Trasitions*/
+    /*visibility:hidden;*/
+    -webkit-transition: opacity 5s ease-out;
+    -moz-transition: opacity 5s ease-out;
+    -o-transition: opacity 5s ease-out;
+    transition: opacity 5s ease-out;
+    opacity: 0.5; 
+}
+@keyframes noheight {
+    0%    {height:10vh}
+    100% {height:20vh}
+}
+/*
+* Sample CSS library for hover list
+
+// Usage : use list
+// Example : http://jsfiddle.net/raliclo/7hk9ua2p/
+
+#menu #list {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    background: #d5d5d5;
+}
+
+#menu:hover #list {
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+}
+
+*/
+
+/*Min styles*/
+/* Copyright 2014 Owen Versteeg; MIT licensed */
+/*body, textarea, input, select {
+    background: 0;border - radius: 0;font: 16 px sans - serif;margin: 0
+}.smooth {
+    transition: all .2 s
+}.btn, .nav a {
+    text - decoration: none
+}.container {
+    margin: 0 20 px;width: auto
+}
+label > * {
+    display: inline
+}
+form > * {
+    display: block;margin - bottom: 10 px
+}.btn {
+    background: #999;border-radius:6px;border:0;color:# fff;cursor: pointer;display: inline - block;margin: 2 px 0;padding: 12 px 30 px 14 px
+}.btn: hover {
+    background: #888}.btn:active,.btn:focus{background:# 777
+}.btn - a {
+    background: #0ae}.btn-a:hover{background:# 09 d
+}.btn - a: active, .btn - a: focus {
+    background: #08b}.btn-b{background:# 3 c5
+}.btn - b: hover {
+    background: #2b4}.btn-b:active,.btn-b:focus{background:# 2 a4
+}.btn - c {
+    background: #d33
+}.btn - c: hover {
+    background: #c22
+}.btn - c: active, .btn - c: focus {
+    background: #b22
+}.btn - sm {
+    border - radius: 4 px;
+    padding: 10 px 14 px 11 px
+}.row {
+    margin: 1 % 0;overflow: auto
+}.col {
+    float: left
+}.table, .c12 {
+    width: 100 %
+}.c11 {
+    width: 91.66 %
+}.c10 {
+    width: 83.33 %
+}.c9 {
+    width: 75 %
+}.c8 {
+    width: 66.66 %
+}.c7 {
+    width: 58.33 %
+}.c6 {
+    width: 50 %
+}.c5 {
+    width: 41.66 %
+}.c4 {
+    width: 33.33 %
+}.c3 {
+    width: 25 %
+}.c2 {
+    width: 16.66 %
+}.c1 {
+    width: 8.33 %
+}
+h1 {
+    font - size: 3e m
+}.btn, h2 {
+    font - size: 2e m
+}.ico {
+    font: 33 px Arial Unicode MS,
+    Lucida Sans Unicode
+}.addon, .btn - sm, .nav, textarea, input, select {
+    outline: 0;font - size: 14 px
+}
+textarea, input, select {
+    padding: 8 px;border: 1 px solid# ccc
+}
+textarea: focus, input: focus, select: focus {
+    border - color: #5ab}textarea,input[type= text] {
+    -webkit - appearance: none;
+    width: 13e m
+}.addon {
+    padding: 8 px 12 px;box - shadow: 0 0 0 1 px# ccc
+}.nav, .nav.current, .nav a: hover {
+    background: #000;color:# fff
+}.nav {
+    height: 24 px;padding: 11 px 0 15 px
+}.nav a {
+    color: #aaa;padding - right: 1e m;position: relative;top: -1 px
+}.nav.pagename {
+    font - size: 22 px;
+    top: 1 px
+}.btn.btn - close {
+    background: #000;float:right;font-size:25px;margin:-54px 7px;display:none}@media(min-width:1310px){.container{margin:auto;width:1270px}}@media(max-width:870px){.row .col{width:100%}}@media(max-width:500px){.btn.btn-close{display:block}.nav{overflow:hidden}.pagename{margin-top:-11px}.nav:active,.nav:focus{height:auto}.nav div:before{background:# 000;border - bottom: 10 px double;border - top: 3 px solid;content: '';float: right;height: 4 px;position: relative;right: 3 px;top: 14 px;width: 20 px
+}.nav a {
+    padding: .5e m 0;display: block;width: 50 %
+}
+}.table th, .table td {
+    padding: .5e m;text - align: left
+}.table tbody > : nth - child(2 n - 1) {
+        background: #ddd
+    }.msg {
+        padding: 1.5e m;background: #def;border - left: 5 px solid #59d}*/

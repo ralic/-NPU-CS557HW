@@ -26,27 +26,28 @@ Project Name: HTML5Application
                   id="userData">
                 <table border="1" >
                     <tr><td colspan="2" align="center">Enter your information</td></tr>
-                    <tr><td>Email Address: </td><td><input size="30" type="text" name="emailaddress" >
+                    <tr><td>Email Address: </td><td class="longdata"><input size="30" type="text" name="emailaddress" >
                             <span id="emailmsg"></span></td></tr>
-                    <tr><td>Password: </td><td><input size="20" type="password" name="password" >
+                    <tr><td>Password: </td><td class="longdata"><input size="20" type="password" name="password"  >
                             <span id="passwdmsg"></span></td></tr>
-                    <tr><td>ReType Password:  </td><td><input size="20" type="password" name="repassword">
+                    <tr><td>ReType Password:  </td><td class="longdata"><input size="20" type="password" name="repassword" >
                             <span id="repasswdmsg"></span></td></tr>
-                    <tr><td>Full Name  </td><td><input size="30" type="text" name="fullname" >
+                    <tr><td>Full Name  </td><td class="longdata"><input size="30" type="text" name="fullname" >
                             <span id="usrmsg"></span></td></tr>
-                    <tr><td>Address:  </td><td><input size="50" type="text" name="address"></td></tr>
-                    <tr><td>City:  </td><td><input size="30" type="text" name="city"></td></tr>
-                    <tr><td>State:  </td><td>
-                            <select name="state" id="statepop0"></select>
-                        </td></tr>
-                    <tr><td>Country:  </td><td><input size="30" type="text" name="country"></td></tr>
-                    <tr><td>Zip Code:  </td><td><input size="20" type="text" name="zipcode">
+                    <tr><td>Address:  </td><td class="longdata"><input size="50" type="text" name="address" ></td></tr>
+                    <tr><td>City:  </td><td class="longdata"><input size="30" type="text" name="city" ></td></tr>
+                    <tr><td>State:  </td><td class="longdata"><select name="state" id="statepop0"></select>                        </td></tr>
+                    <tr><td>Country:  </td><td class="longdata"><input size="30" type="text" name="country" class="longdata"></td></tr>
+                    <tr><td>Zip Code:  </td><td class="longdata"><input size="20" type="text" name="zipcode" class="longdata">
                             <span id="zipmsg"></span></td></tr>
-                    <tr><td>Phone No:  </td><td><input size="30" type="text" name="phoneno" >
+                    <tr><td>Phone No:  </td><td class="longdata"><input size="30" type="text" name="phoneno" class="longdata">
                             <span id="phonemsg"></span></td></tr>
-                    <tr><td></td><td>
-                            <input type="submit" name="submit" value="Submit" class="submits">
-                            <input type="reset" value="Cancel" class="submits"></td></tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><button type="submit" value="Submit" class="submits">Submit</button></td>
+                        <td><button type="reset" value="Cancel" class="submits">Cancel</button></td>
+                    </tr>
                 </table>
             </form>
         </div>

@@ -46,6 +46,12 @@ td {
     border-style: solid;
     text-align: left;
 }
+.longdata {
+    width : 280px;
+}
 .submits {
     height : 35px;
+    width : 100%;
+    display: block;
+    margin:auto;
 }

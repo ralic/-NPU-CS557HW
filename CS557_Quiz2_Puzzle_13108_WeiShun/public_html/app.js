@@ -75,6 +75,7 @@ function timerstart() {
 function handleDragStart(e) {
     e.dataTransfer.setData("text", this.id);
 }
+
 function handleDragEnterLeave(e) {
     if (e.type === "dragenter") {
         this.className = "drag-enter";

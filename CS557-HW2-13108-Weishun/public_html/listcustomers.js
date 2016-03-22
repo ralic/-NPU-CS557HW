@@ -7,6 +7,21 @@
  * Project Name: CS557-HW2-13108-Weishun
  */
 
+'use strict'
+/*
+ * Function to recall customerrDataAll from localStorage
+ */
+var getAllCustomer = function () {
+    if (localStorage.customerDataAll !== undefined) {
+        var response = JSON.parse(localStorage.customerDataAll);
+        return response;
+    }
+//    var customerString = "";
+//    customerString = localStorage.getItem("customerDataAll");
+//    return customerString;
+    return '<h1>Error found in getting all customer info</h1>';
+};
+
 var clist = getAllCustomer(); // it's in array format
 var tb = document.getElementById("customerlist");
 tb.content = "";
