@@ -1,10 +1,10 @@
 /*
  * Student Info: Name=Lo,WeiShun , ID= 13108
- * Subject: CS557-HW2_Summer_2015
+ * Subject: CS557-HW4_Summer_2015
  * Author: raliclo
  * Filename: listcustomers.js
  * Date and Time: Feb 9, 2016 12:08:05 AM
- * Project Name: CS557-HW2-13108-Weishun
+ * Project Name: CS557-HW4-13108-Weishun
  */
 
 window.onload = function () {

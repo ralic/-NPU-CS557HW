@@ -1,10 +1,10 @@
 /*
  * Student Info: Name=Lo,WeiShun , ID= 13108
- * Subject: CourseNo_HWNo_Summer_2015
+ * Subject: CourseNo_HWNo4_Summer_2015
  * Author: raliclo
  * Filename: hp.js.js
  * Date and Time: Feb 21, 2016 3:56:50 PM
- * Project Name: CS557-HW3-13108-Weishun
+ * Project Name: CS557-HW4-13108-Weishun
  */
 //Reference :https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
