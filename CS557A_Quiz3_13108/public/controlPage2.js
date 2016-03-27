@@ -42,13 +42,13 @@ gofinal = function () {
     // xhr.send(JSON.stringify(data));
     function readBody(xhr) {
         var data;
-//        if (!xhr.responseType || xhr.responseType === "text") {
-//            data = xhr.responseText;
-//        } else if (xhr.responseType === "document") {
-//            data = xhr.responseXML;
-//        } else {
-        data = xhr.response;
-//        }
+        if (!xhr.responseType || xhr.responseType === "text") {
+            data = xhr.responseText;
+        } else if (xhr.responseType === "document") {
+            data = xhr.responseXML;
+        } else {
+            data = xhr.response;
+        }
         return data;
     }
 
@@ -57,8 +57,10 @@ gofinal = function () {
             console.log(readBody(xhr));
         }
     };
-    xhr.user = user;
-    xhr.send(user);
+    xhr.user = JSON.stringify(user);
+    console.log(xhr);
+    console.log(xhr.user);
+    xhr.send(xhr.user);
     window.open("./final", "_self");
 };
 
