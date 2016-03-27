@@ -35,13 +35,30 @@ gofinal = function () {
     localStorage.setItem('user', JSON.stringify(user));
     // construct an HTTP request
     xhr = new XMLHttpRequest();
-    xhr.open("GET", "/final", true);
+    xhr.open("POST", "/final", true);
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     // send the collected data as JSON
     // If data is not JSON object yet.
     // xhr.send(JSON.stringify(data));
+    function readBody(xhr) {
+        var data;
+//        if (!xhr.responseType || xhr.responseType === "text") {
+//            data = xhr.responseText;
+//        } else if (xhr.responseType === "document") {
+//            data = xhr.responseXML;
+//        } else {
+        data = xhr.response;
+//        }
+        return data;
+    }
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(readBody(xhr));
+        }
+    };
     xhr.user = user;
-    xhr.send();
+    xhr.send(user);
     window.open("./final", "_self");
 };
 
