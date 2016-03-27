@@ -95,7 +95,6 @@ var addtocart = function (req, res) {
             infotag.style.color = "yellow";
         }
     }
-
     return;
 };
 var viewcart = function (req, res) {
@@ -105,6 +104,7 @@ var viewcart = function (req, res) {
     console.log(localStorage.localcart);
     window.open("./viewcart.html", "_self");
 };
+
 var clearcart = function (req, res) {
     event.preventDefault();
     // Storage cart data in localstorage as a  single JSON object.
