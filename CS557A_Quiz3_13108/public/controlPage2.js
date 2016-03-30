@@ -56,11 +56,12 @@ gofinal = function () {
         if (xhr.readyState === 4) {
             console.log(readBody(xhr));
         }
+        delete data;
     };
-    xhr.user = JSON.stringify(user);
-    console.log(xhr);
-    console.log(xhr.user);
-    xhr.send(xhr.user);
+    data = new FormData();
+    data = JSON.stringify(user);
+    console.log(data);
+    xhr.send(data);
     window.open("./final", "_self");
 };
 
