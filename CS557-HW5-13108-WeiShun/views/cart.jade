@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='./stylesheets/style.css')
+    body
+        header
+            h1= title
+            hr
+        section
+            table(style="border-style:double")
+                thead(style="border-style:double")
+                    tr(style="border-style:double")
+                        th Order ID  
+                        th Item Name
+                        th Quantity
+                        th Update Qty
+                        th Delete 
+                tbody(style="border-style:double")
+                    each item in cart
+                        tr
+                            td #{item.id}
+                            td #{item.itemname}
+                            td #{item.quantity}
+                            td 
+                                form(method='post', action='/cart')
+                                    input(type='hidden', name="update" value="#{item.id}")  
+                                    input(type='text', name='quantity' value='0')  
+                                    input(type='submit' value="Update")  
+                                //button(onclick ="#{item.update}()") update
+                            td 
+                                  form(method='post', action='/cart')
+                                    input(type='hidden', name="delete" value="#{item.id}")  
+                                    input(type='submit' value="Delete") 
+           hr
