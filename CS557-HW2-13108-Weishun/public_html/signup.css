@@ -10,6 +10,10 @@ Project Name: CS557-HW2-13108-Weishun
     Created on : Feb 8, 2016, 6:34:20 PM
     Author     : raliclo
 */
+body {
+    position:relative;
+    margin-top:3vh;
+}
 * {
     max-height: 100%;
     max-width: 100%;

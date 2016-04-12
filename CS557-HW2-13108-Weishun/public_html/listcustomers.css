@@ -10,7 +10,9 @@ Project Name: CS557-HW2-13108-Weishun
     Created on : Feb 8, 2016, 11:22:23 PM
     Author     : raliclo
 */
-
+body {
+    height :100vh;
+}
 table {
     width : 70%;
 }
