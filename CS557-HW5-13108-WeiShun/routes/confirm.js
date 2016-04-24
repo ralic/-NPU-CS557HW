@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function (req, res, next) {
+router.all('/', function (req, res, next) {
 //    console.log(req);
-    res.render('confirm', {title: 'Confirmation'});
+    res.render('confirm');
 });
 
 module.exports = router;
