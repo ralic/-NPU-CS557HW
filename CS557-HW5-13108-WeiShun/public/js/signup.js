@@ -44,6 +44,7 @@ window.onload = function () {
 
         // Check password
         div = $$("passwdmsg");
+        removecc(div);
         div.style.color = "red";
         if (userForm.password.value.length <= 5)
         {
@@ -52,8 +53,8 @@ window.onload = function () {
             errs++;
         }
         div = $$("repasswdmsg");
+        removecc(div);
         div.style.color = "red";
-        removecc();
         if (userForm.password.value !== userForm.repassword.value)
         {
             div.appendChild(txt("The two passwords don't match"));
@@ -63,7 +64,7 @@ window.onload = function () {
         // Check user
         div = $$("usrmsg");
         div.style.color = "red";
-        removecc();
+        removecc(div);
         if (userForm.fullname.value.length === 0)
         {
             div.appendChild(txt("Name cannot be blank"));
@@ -74,7 +75,7 @@ window.onload = function () {
         // Check zipcode
         div = $$("zipmsg");
         div.style.color = "red";
-        removecc();
+        removecc(div);
         if (userForm.zipcode.value.length === 0)
         {
             div.appendChild(txt("ZipCode cannot be blank"));
@@ -92,7 +93,7 @@ window.onload = function () {
         // Check US-Phone Number
         div = $$("phonemsg");
         div.style.color = "red";
-        removecc();
+        removecc(div);
         if (userForm.phoneno.value.length === 0)
         {
             div.appendChild(txt("PhoneNo cannot be blank"));
