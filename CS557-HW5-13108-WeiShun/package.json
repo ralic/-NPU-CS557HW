@@ -2,11 +2,11 @@
   "name": "CS557-HW5-13108-WeiShun",
   "version": "0.0.0",
   "private": true,
-  "ng2-scripts": {
+  "scripts": {
           "start": "npm run lite",
             "lite": "lite-server"
   },
-  "scripts": {
+  "my-scripts": {
     "start": "node ./bin/www"
   },
   "license": "ISC",
