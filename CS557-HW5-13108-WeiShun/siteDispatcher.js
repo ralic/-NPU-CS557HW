@@ -1,13 +1,13 @@
-/* 
+/*
  * Student Info: Name=Lo,WeiShun , ID= 13108
  * Subject: CourseNo_HWNo_Summer_2015
  * Author: raliclo
- * Filename: newjavascript.js
+ * Filename: siteDispatcher.js
  * Date and Time: Apr 24, 2016 3:28:54 AM
  * Project Name: CS557-HW5-13108-WeiShun
  */
 
-/* 
+/*
  * Copyright 2016 raliclo.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,21 +38,21 @@ var listall = require('./routes/listall');
 app.use('/listall', listall);
 
 // Error pages definitions
-  // Handle 404
-  app.use(function(req, res) {
-      res.status(400);
-     res.render('404.jade', {title: '404: File Not Found'});
-  });
-  
-  // Handle 500
-  app.use(function(error, req, res, next) {
-      res.status(500);
-     res.render('500.jade', {title:'500: Internal Server Error', error: error});
-  });
-  
-  // Handle others
-  app.use(function (err, req, res, next) {
-    res.status(err.status );
+// Handle 404
+app.use(function (req, res) {
+    res.status(400);
+    res.render('404.jade', {title: '404: File Not Found'});
+});
+
+// Handle 500
+app.use(function (error, req, res, next) {
+    res.status(500);
+    res.render('500.jade', {title: '500: Internal Server Error', error: error});
+});
+
+// Handle others
+app.use(function (err, req, res, next) {
+    res.status(err.status);
     res.render('error', {
         message: err.message,
         error: {}

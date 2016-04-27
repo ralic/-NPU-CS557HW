@@ -4,8 +4,18 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-app = express();
+var less = require('less');
+less.render('.class { width: (1 + 1) }',
+        {
+            paths: ['.', './lib'], // Specify search paths for @import directives
+            filename: 'style.less', // Specify a filename, for better error messages
+            compress: true          // Minify CSS output
+        },
+        function (e, output) {
+            console.log(output.css);
+        });
 
+app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -16,13 +26,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-//
+
 // Calling external configuration for Routing
 
-require('./siteDispatcher.js'); 
+require('./siteDispatcher.js');
 
 // development error handler
 // will print stacktrace

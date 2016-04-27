@@ -26,13 +26,13 @@ window.onload = function () {
         var errs = 0;
         // Check email
         var div = $$("emailmsg");
-        var removecc = function () {
+        var removecc = function (div) {
             if (div.hasChildNodes()) {
                 div.removeChild(div.firstChild);
             }
         };
         div.style.color = "red";
-        removecc();
+        removecc(div);
         var regex = /(^\w+\@\w+\.\w+)/;
         var match = regex.exec(userForm.emailaddress.value);
         if (!match)
